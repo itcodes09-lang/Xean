@@ -201,7 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'Jupiter', orbitalPeriod: 11.86, distanceFromSun: 778.5 },
             { name: 'Saturn', orbitalPeriod: 29.46, distanceFromSun: 1427 },
             { name: 'Uranus', orbitalPeriod: 84.01, distanceFromSun: 2871 },
-            { name: 'Neptune', orbitalPeriod: 164.79, distanceFromSun: 4495 }
+            { name: 'Neptune', orbitalPeriod: 164.79, distanceFromSun: 4495 },
+            { name: 'Pluto', orbitalPeriod: 248, distanceFromSun: 5906 }
         ];
 
         let html = '';
@@ -219,5 +220,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
         resultsContent.innerHTML = html;
         resultsDiv.style.display = 'grid';
+    }
+
+    const copyBtn = document.getElementById('copy-script-btn');
+    const downloadBtn = document.getElementById('download-script-btn');
+    const scriptBlock = document.getElementById('script-code');
+
+    if (copyBtn && scriptBlock) {
+        copyBtn.addEventListener('click', async () => {
+            const scriptText = scriptBlock.innerText;
+            try {
+                await navigator.clipboard.writeText(scriptText);
+                copyBtn.textContent = 'Copied!';
+                setTimeout(() => { copyBtn.textContent = 'Copy Script'; }, 1800);
+            } catch (err) {
+                alert('Copy failed. Please copy the script manually.');
+            }
+        });
+    }
+
+    if (downloadBtn && scriptBlock) {
+        downloadBtn.addEventListener('click', () => {
+            const scriptText = scriptBlock.innerText;
+            const blob = new Blob([scriptText], { type: 'text/x-python' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'solar_system_generator.py';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        });
     }
 });

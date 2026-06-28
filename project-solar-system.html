@@ -279,6 +279,120 @@
             line-height: 1.6;
         }
 
+        .resource-sections {
+            display: grid;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .resource-card {
+            background: rgba(26, 31, 58, 0.6);
+            border: 1px solid rgba(255, 179, 217, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .resource-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .resource-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .resource-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .resource-link:hover {
+            color: #ff8fb8;
+        }
+
+        .script-panel {
+            background: rgba(15, 20, 43, 0.85);
+            border: 1px solid rgba(255, 179, 217, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .script-panel-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 28px 30px;
+            background: linear-gradient(135deg, rgba(255, 179, 217, 0.1), rgba(255, 133, 180, 0.05));
+        }
+
+        .script-panel-header h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--primary-color);
+        }
+
+        .script-panel-header p {
+            margin: 8px 0 0;
+            color: var(--text-secondary);
+            max-width: 640px;
+        }
+
+        .script-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .script-button {
+            border: none;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background: rgba(255, 179, 217, 0.15);
+            color: #fff;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .script-button:hover {
+            background: rgba(255, 179, 217, 0.28);
+            transform: translateY(-1px);
+        }
+
+        .script-code-block {
+            padding: 24px 28px;
+            background: rgba(4, 10, 32, 0.95);
+            color: #e6e6ff;
+            font-family: 'Source Code Pro', monospace, 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            overflow: auto;
+            max-height: 520px;
+            white-space: pre;
+        }
+
+        .script-code-block code {
+            display: block;
+            min-width: 100%;
+        }
+
+        .script-notice {
+            padding: 18px 28px;
+            color: var(--text-secondary);
+            background: rgba(255, 179, 217, 0.05);
+            border-top: 1px solid rgba(255, 179, 217, 0.08);
+        }
+
         @media (max-width: 768px) {
             .solar-hero-content {
                 grid-template-columns: 1fr;
@@ -464,6 +578,20 @@
                         </div>
                     </div>
 
+                    <!-- Earth and Moon -->
+                    <div class="planet-item">
+                        <div class="planet-number">5</div>
+                        <div class="planet-video">
+                            <video autoplay muted loop playsinline>
+                                <source src="multimedia/planet videos/earthmoon.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="planet-content">
+                            <div class="planet-name">Earth & Moon</div>
+                            <p class="planet-info">A shared view of Earth and its natural satellite, highlighting the moon's orbit and tidal relationship.</p>
+                        </div>
+                    </div>
+
                     <!-- Moon -->
                     <div class="planet-item">
                         <div class="planet-number">5</div>
@@ -506,6 +634,20 @@
                         </div>
                     </div>
 
+                    <!-- Jupiter and Moon -->
+                    <div class="planet-item">
+                        <div class="planet-number">8</div>
+                        <div class="planet-video">
+                            <video autoplay muted loop playsinline>
+                                <source src="multimedia/planet videos/jupitermoon.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="planet-content">
+                            <div class="planet-name">Jupiter & Moon</div>
+                            <p class="planet-info">A view of Jupiter with its moon system, emphasizing the giant planet's dynamic orbital environment.</p>
+                        </div>
+                    </div>
+
                     <!-- Saturn -->
                     <div class="planet-item">
                         <div class="planet-number">8</div>
@@ -517,6 +659,20 @@
                         <div class="planet-content">
                             <div class="planet-name">Saturn</div>
                             <p class="planet-info">0.034 revolutions | 29.46 Earth years. Famous for spectacular ring system and 80+ moons.</p>
+                        </div>
+                    </div>
+
+                    <!-- Saturn and Moon -->
+                    <div class="planet-item">
+                        <div class="planet-number">9</div>
+                        <div class="planet-video">
+                            <video autoplay muted loop playsinline>
+                                <source src="multimedia/planet videos/saturnmoon.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="planet-content">
+                            <div class="planet-name">Saturn & Moon</div>
+                            <p class="planet-info">A cinematic view of Saturn and its moon system, highlighting the planet’s rings and satellites.</p>
                         </div>
                     </div>
 
@@ -534,6 +690,20 @@
                         </div>
                     </div>
 
+                    <!-- Uranus and Moon -->
+                    <div class="planet-item">
+                        <div class="planet-number">10</div>
+                        <div class="planet-video">
+                            <video autoplay muted loop playsinline>
+                                <source src="multimedia/planet videos/uranusmoon.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="planet-content">
+                            <div class="planet-name">Uranus & Moon</div>
+                            <p class="planet-info">An icy view of Uranus with its surrounding moons, showing the planet’s unusual axial tilt.</p>
+                        </div>
+                    </div>
+
                     <!-- Neptune -->
                     <div class="planet-item">
                         <div class="planet-number">10</div>
@@ -548,9 +718,23 @@
                         </div>
                     </div>
 
-                    <!-- Pluto -->
+                    <!-- Neptune and Moon -->
                     <div class="planet-item">
                         <div class="planet-number">11</div>
+                        <div class="planet-video">
+                            <video autoplay muted loop playsinline>
+                                <source src="multimedia/planet videos/neptunemoon.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="planet-content">
+                            <div class="planet-name">Neptune & Moon</div>
+                            <p class="planet-info">A blue-hued scene of Neptune accompanied by its moon system, capturing the icy giant’s atmosphere.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pluto -->
+                    <div class="planet-item">
+                        <div class="planet-number">12</div>
                         <div class="planet-video">
                             <video autoplay muted loop playsinline>
                                 <source src="multimedia/planet videos/pluto.mp4" type="video/mp4">
@@ -560,6 +744,147 @@
                             <div class="planet-name">Pluto</div>
                             <p class="planet-info">0.004 revolutions | 248 Earth years. Dwarf planet with heart-shaped surface features.</p>
                         </div>
+                    </div>
+                </div>
+
+                <div class="resource-sections">
+                    <div class="resource-card">
+                        <h3>Planet Scripts</h3>
+                        <p>Browse the animation and procedural scripting files used to create the solar system motion and planet visuals.</p>
+                        <a class="resource-link" href="https://drive.google.com/drive/folders/1DEE16ssbM5Y-ZkaUnkEtin-fpe9DZ6Hc?usp=drive_link" target="_blank" rel="noopener noreferrer">Open Planet Scripts →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>Planet Blender Files</h3>
+                        <p>Access the Blender project files for each planet model and scene setup used in the final render.</p>
+                        <a class="resource-link" href="https://drive.google.com/drive/folders/1zMsS2C57nRdNc93xs7ucNP2Aal2WJrIY?usp=drive_link" target="_blank" rel="noopener noreferrer">Open Blender Files →</a>
+                    </div>
+                </div>
+
+                <div class="script-panel">
+                    <div class="script-panel-header">
+                        <div>
+                            <h3>Solar System Script</h3>
+                            <p>Python script that automatically creates planets with accurate proportions, textures, and orbital mechanics.</p>
+                        </div>
+                        <div class="script-actions">
+                            <button id="copy-script-btn" class="script-button" type="button">Copy Script</button>
+                            <button id="download-script-btn" class="script-button" type="button">Download Script</button>
+                        </div>
+                    </div>
+                    <div class="script-code-block" id="script-code">
+import bpy
+import math
+import os
+import random
+
+# PRESERVED VISUAL MATRIX
+bodies = [
+    {"name": "Sun",     "filename": "sun.blend",     "orbit_radius": 0.0,  "period": 1,     "radius": 12.0, "tilt": 0.0,   "rot_period": 0.0},  
+    {"name": "Mercury", "filename": "mercury.blend", "orbit_radius": 18.0, "period": 88,    "radius": 0.8,  "tilt": 0.03,  "rot_period": 58.6},
+    {"name": "Venus",   "filename": "venus.blend",   "orbit_radius": 24.0, "period": 225,   "radius": 1.3,  "tilt": 177.3, "rot_period": -243.0},
+    {"name": "Earth",   "filename": "earth.blend",   "orbit_radius": 31.0, "period": 600,   "radius": 1.5,  "tilt": 23.44, "rot_period": 3.5},  
+    {"name": "Moon",    "filename": "moon.blend",    "orbit_radius": 3.8,  "period": 380,   "radius": 0.4,  "tilt": 6.68,  "rot_period": 27.3}, 
+    {"name": "Mars",    "filename": "mars.blend",    "orbit_radius": 38.0, "period": 687,   "radius": 1.0,  "tilt": 25.19, "rot_period": 8.5},   
+    {"name": "Jupiter", "filename": "jupiter.blend", "orbit_radius": 52.0, "period": 4333,  "radius": 4.5,  "tilt": 3.13,  "rot_period": 4.1},
+    {"name": "Saturn",  "filename": "saturn.blend",  "orbit_radius": 68.0, "period": 10759, "radius": 3.8,  "tilt": 26.73, "rot_period": 4.4},
+    {"name": "Uranus",  "filename": "uranus.blend",  "orbit_radius": 82.0, "period": 30687, "radius": 2.4,  "tilt": 97.77, "rot_period": -7.2},
+    {"name": "Neptune", "filename": "neptune.blend", "orbit_radius": 95.0, "period": 60190, "radius": 2.2,  "tilt": 28.32, "rot_period": 6.7},
+    {"name": "Pluto",   "filename": "pluto.blend",   "orbit_radius": 106.0,"period": 90560, "radius": 0.6,  "tilt": 122.5, "rot_period": -6.39},
+]
+
+base_dir = r"C:\solarsystem blend files"
+start_frame = 1
+frames_per_body = 120 
+showcase_total_frames = len(bodies) * frames_per_body 
+outro_duration = 1440 
+total_frames = showcase_total_frames + outro_duration 
+
+bpy.context.scene.frame_start = start_frame
+bpy.context.scene.frame_end = total_frames
+
+random.seed(42)
+for b in bodies:
+    b["start_offset"] = random.uniform(0, 2 * math.pi)
+
+
+def clear_scene():
+    print("Clearing scene...")
+    if bpy.context.object and bpy.context.object.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+    bpy.ops.object.select_all(action='SELECT')
+    bpy.ops.object.delete(use_global=False)
+    for collection in list(bpy.data.collections):
+        bpy.data.collections.remove(collection)
+    for block in [bpy.data.meshes, bpy.data.curves, bpy.data.actions, bpy.data.materials, bpy.data.lights, bpy.data.cameras]:
+        for item in list(block):
+            if item.users == 0: block.remove(item)
+
+
+def setup_space_lighting():
+    print("Deploying directional studio lighting and ambient protection lines...")
+    light_data = bpy.data.lights.new(name="Sun_Core_Light", type='POINT')
+    light_data.energy = 1600000.0  
+    light_data.shadow_soft_size = 3.0
+    sun_light = bpy.data.objects.new(name="Sun_Core_Light", object_data=light_data)
+    bpy.context.scene.collection.objects.link(sun_light)
+    sun_light.location = (0, 0, 0)
+    
+    fill_sun_data = bpy.data.lights.new(name="Overhead_Fill", type='SUN')
+    fill_sun_data.energy = 4.2  
+    fill_sun = bpy.data.objects.new(name="Overhead_Fill", object_data=fill_sun_data)
+    bpy.context.scene.collection.objects.link(fill_sun)
+    fill_sun.rotation_euler = (math.radians(35), math.radians(15), math.radians(45))
+    
+    bounce_sun_data = bpy.data.lights.new(name="Under_Fill", type='SUN')
+    bounce_sun_data.energy = 1.8
+    bounce_sun = bpy.data.objects.new(name="Under_Fill", object_data=bounce_sun_data)
+    bpy.context.scene.collection.objects.link(bounce_sun)
+    bounce_sun.rotation_euler = (math.radians(-145), 0, math.radians(15))
+
+    amb_angles = [0, 120, 240]
+    for i, angle in enumerate(amb_angles):
+        rad = math.radians(angle)
+        amb_data = bpy.data.lights.new(name=f"Ambient_Zone_Glow_{i}", type='SUN')
+        amb_data.energy = 0.35 
+        amb_data.use_shadow = False
+        amb_light = bpy.data.objects.new(name=f"Ambient_Zone_Glow_{i}", object_data=amb_data)
+        bpy.context.scene.collection.objects.link(amb_light)
+        amb_light.rotation_euler = (math.radians(20), math.radians(40), rad)
+
+    if bpy.context.scene.world:
+        bpy.context.scene.world.use_nodes = False
+        bpy.context.scene.world.color = (0.002, 0.002, 0.004)
+
+
+def create_background_environment():
+    print("Deploying isolated distant background star field...")
+    star_mat = bpy.data.materials.new(name="Star_Emission_Mat")
+    star_mat.use_nodes = True
+    
+    nodes = star_mat.node_tree.nodes
+    nodes.clear()
+    out_node = nodes.new(type='ShaderNodeOutputMaterial')
+    emit_node = nodes.new(type='ShaderNodeEmission')
+    emit_node.inputs['Color'].default_value = (1.0, 1.0, 1.0, 1.0)
+    emit_node.inputs['Strength'].default_value = 2.0 
+    star_mat.node_tree.links.new(emit_node.outputs['Emission'], out_node.inputs['Surface'])
+    
+    for _ in range(1200):
+        dist = random.uniform(350, 600) 
+        theta = random.uniform(0, 2 * math.pi)
+        phi = random.uniform(0, math.pi)
+        x = dist * math.sin(phi) * math.cos(theta)
+        y = dist * math.sin(phi) * math.sin(theta)
+        z = dist * math.cos(phi)
+        
+        bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1, radius=random.uniform(0.12, 0.28), location=(x, y, z))
+        star_part = bpy.context.active_object
+        star_part.name = "Background_Star"
+        star_part.data.materials.append(star_mat)
+        
+        star_part.visible_shadow = False
+        star_part.select_set(False)
                     </div>
                 </div>
             </div>
